@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    tools:context="com.fkulic.ledcontroller.ControlLedActivity">
+
+
+    <TextView
+        android:id="@+id/tvOldColorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Old Color:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvOldColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvHexOldColor"/>
+
+    <TextView
+        android:id="@+id/tvHexOldColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HEX_STARE"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvOldColor"
+        app:layout_constraintLeft_toRightOf="@+id/tvOldColorLabel"
+        app:layout_constraintRight_toLeftOf="@+id/tvOldColor"/>
+
+
+    <TextView
+        android:id="@+id/tvOldColor"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/tvNewColor"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tvNewColorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Color:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvNewColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvHexNewColor"/>
+
+    <TextView
+        android:id="@+id/tvHexNewColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HEX_NOVE"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvNewColor"
+        app:layout_constraintLeft_toRightOf="@+id/tvNewColorLabel"
+        app:layout_constraintRight_toLeftOf="@+id/tvNewColor"/>
+
+    <TextView
+        android:id="@+id/tvNewColor"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnOnOff"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOldColor"/>
+
+
+    <Button
+        android:id="@+id/btnSelectColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PICK COLOR"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnOnOff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnOnOff"/>
+
+    <ToggleButton
+        android:id="@+id/btnOnOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnDisconnect"
+        app:layout_constraintLeft_toRightOf="@+id/btnSelectColor"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewColor"/>
+
+    <Button
+        android:id="@+id/btnDisconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disconnect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOnOff"/>
+
+</android.support.constraint.ConstraintLayout>
